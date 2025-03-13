@@ -34,3 +34,6 @@ content-type: application/json
     "precio":"450.45",
     "numserie":"34FR12"
 }
+
+######
+DELETE http://localhost:8080/webapi/ordenador/numserie/FT21R
