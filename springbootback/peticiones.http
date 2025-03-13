@@ -1,0 +1,36 @@
+GET http://localhost:8080/webapi/ordenador
+
+
+#######
+
+GET http://localhost:8080/webapi/ordenador?modelo=Optimus
+
+
+#######
+
+
+GET http://localhost:8080/webapi/ordenador?marca=apple
+
+######
+
+POST http://localhost:8080/webapi/ordenador
+content-type: application/json
+
+{
+    "modelo":"Hola",
+    "marca":"apple",
+    "precio":"5800.00",
+    "numserie":"FT21R"
+}
+
+######
+
+POST http://localhost:8080/webapi/ordenador
+content-type: application/json
+
+{
+    "modelo":"Ultimo",
+    "marca":"Axus",
+    "precio":"450.45",
+    "numserie":"34FR12"
+}
