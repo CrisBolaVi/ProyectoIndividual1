@@ -7,6 +7,7 @@ public interface OrdenadorRepository {
      List<Ordenador> buscarTodos();
      List<Ordenador> buscarTodosPorModelo(String modelo);
      List<Ordenador> buscarTodosPorMarca(String marca);
+     
    
     void insertar (Ordenador ordenador);
     void borrar(Ordenador ordenador);

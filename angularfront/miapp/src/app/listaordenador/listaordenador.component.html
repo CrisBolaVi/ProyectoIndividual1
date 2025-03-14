@@ -1,0 +1,19 @@
+
+<h2>Lista de Ordenadores</h2><br>
+<table class="table">
+    <tr>
+        <td><h4 class="fw-bold">Modelo</h4></td>
+        <td class="fw-bold">Marca</td>
+        <td class="fw-bold">Precio</td>
+        <td class="fw-bold">Num. Serie</td></tr>
+    @for(ordenador of listaordenador; track ordenador.numserie){
+        <tr>
+             <td>{{ordenador.modelo}}</td>
+            <td>{{ordenador.marca}}</td>
+            <td>{{ordenador.precio}}</td>
+            <td>{{ordenador.numserie}}</td>
+            <td><input type="button" class="btn btn-warning" value="Borrar"(click)="borrar(ordenador)"></td>
+        </tr>
+   }
+</table>
+<a routerLink="/formulario-ordenador">ir a formulario</a>

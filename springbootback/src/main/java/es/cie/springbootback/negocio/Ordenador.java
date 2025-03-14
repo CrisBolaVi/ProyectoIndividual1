@@ -14,8 +14,8 @@ public class Ordenador {
         this.numserie = numserie;
     }
 
-    public Ordenador(String modelo) {
-        this.modelo = modelo;
+    public Ordenador(String numserie) {
+        this.numserie = numserie;
     }
 
     public Ordenador() {

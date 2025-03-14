@@ -20,7 +20,7 @@ content-type: application/json
     "modelo":"Hola",
     "marca":"apple",
     "precio":"5800.00",
-    "numserie":"FT21R"
+    "numserie":"GGt09"
 }
 
 ######
@@ -32,8 +32,27 @@ content-type: application/json
     "modelo":"Ultimo",
     "marca":"Axus",
     "precio":"450.45",
-    "numserie":"34FR12"
+    "numserie":"878AA"
 }
 
 ######
-DELETE http://localhost:8080/webapi/ordenador/numserie/FT21R
+DELETE http://localhost:8080/webapi/ordenador/FT21R
+
+######
+
+GET http://localhost:8080/webapi/ordenador
+
+
+######
+
+POST http://localhost:8080/webapi/ordenador
+content-type: application/json
+
+{
+    "modelo":"Nuevo3",
+    "marca":"Axus",
+    "precio":"300.95",
+    "numserie":"DD33EE"
+}
+
+

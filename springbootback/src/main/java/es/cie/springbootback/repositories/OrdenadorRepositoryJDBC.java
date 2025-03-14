@@ -29,6 +29,8 @@ public class OrdenadorRepositoryJDBC implements OrdenadorRepository {
 
     @Override
     public void borrar(Ordenador ordenador) {
+
+        System.out.println(ordenador.getNumserie());
         plantilla.update("delete from ordenador where numserie=?", ordenador.getNumserie());
     }
 
