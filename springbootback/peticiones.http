@@ -17,10 +17,10 @@ POST http://localhost:8080/webapi/ordenador
 content-type: application/json
 
 {
-    "modelo":"Hola",
-    "marca":"apple",
-    "precio":"5800.00",
-    "numserie":"GGt09"
+    "modelo":"NUEVO4",
+    "marca":"LG",
+    "precio":"690.00",
+    "numserie":"OOPPQQ5"
 }
 
 ######
@@ -36,7 +36,7 @@ content-type: application/json
 }
 
 ######
-DELETE http://localhost:8080/webapi/ordenador/FT21R
+DELETE http://localhost:8080/webapi/ordenador/OOPPQQ5
 
 ######
 

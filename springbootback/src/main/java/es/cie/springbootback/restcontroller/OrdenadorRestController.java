@@ -11,11 +11,11 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import es.cie.springbootback.negocio.Ordenador;
 import es.cie.springbootback.repositories.OrdenadorRepository;
+
 
 
 @RestController
@@ -43,14 +43,5 @@ public class OrdenadorRestController {
         
         ordenadorRepository.borrar(new Ordenador(numserie));
     }
-@GetMapping(params = { "modelo" })
-    @CrossOrigin(origins = "http://localhost:4200")
-    public List<Ordenador> buscarTodosPorModelo(@RequestParam String modelo) {
-        return ordenadorRepository.buscarTodosPorModelo(modelo);
-    }
-    @GetMapping(params = { "marca" })
-    @CrossOrigin(origins = "http://localhost:4200")
-    public List<Ordenador> buscarTodosPorMarca(@RequestParam String marca) {
-        return ordenadorRepository.buscarTodosPorMarca(marca);
-    }
+
 }
