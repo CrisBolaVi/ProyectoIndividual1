@@ -3,6 +3,9 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
+import org.springframework.data.domain.Pageable;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
@@ -31,8 +34,23 @@ public class OrdenadorRepositoryJDBC implements OrdenadorRepository {
         plantilla.update("delete from ordenador where numserie=?", ordenador.getNumserie());
     }
 
-   
+    @Override
+    public Page<Ordenador> buscarPaginado(Pageable pageable) {
+        int offset = pageable.getPageNumber() * pageable.getPageSize();
+        int limit = pageable.getPageSize();
+      
+        String sql = "select * from ordenador limit ? offset ?";
+        List<Ordenador> ordenadores = plantilla.query(sql, new OrdenadorRowMapper(), limit, offset);
+
+        String countSql = "SELECT COUNT(*) FROM ordenadores";
+        int total = plantilla.queryForObject(countSql, Integer.class);
+
+        return new PageImpl<>(ordenadores, pageable, total);
+    }
+    }
 
    
 
-}
+   
+  
+

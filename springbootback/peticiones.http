@@ -55,4 +55,10 @@ content-type: application/json
     "numserie":"DD33EE"
 }
 
+######
+GET http://localhost:8080/webapi/ordenador/paginado
+
+
+######
+
 
