@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"name": "ProyectoIndividual1",
+			"path": "."
+		},
+		{
+			"path": "../ProyectoGrupalFront"
+		}
+	],
+	"settings": {
+		"java.compile.nullAnalysis.mode": "disabled"
+	}
+}
